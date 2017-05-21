@@ -1,0 +1,129 @@
+<h1>Task Detail</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <h4>Title: </h4>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" ng-model="taskData.title" ng-disabled="disableLogic"/>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <h4>Description: </h4>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" ng-model="taskData.description" ng-disabled="disableLogic"/>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">&nbsp;</div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <h4>Status: </h4>
+        </div>
+        <div class="col-md-6">
+            <select class="form-control" style="height:initial" ng-model="taskData.status" ng-options="item for item in statusList" ng-disabled="disableLogic"></select>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <h4>Priority: </h4>
+        </div>
+        <div class="col-md-6">
+            <select class="form-control" style="height:initial" ng-model="taskData.priority" ng-options="item for item in priorityList" ng-disabled="disableLogic"></select>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">&nbsp;</div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <h4>Due Date: </h4>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" ng-model="taskData.dueDate" ng-disabled="1==1"/>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <h4>Remind Date: </h4>
+        </div>
+        <div class="col-md-6">
+            <p class="input-group">
+                <input type="text" readonly class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-click="open1()" ng-disabled="disableLogic"/>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open1()" ng-disabled="disableLogic"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">&nbsp;</div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <h4>Created Time: </h4>
+        </div>
+        <div class="col-md-6">
+            <input type="text" ng-disabled="1==1" class="form-control" ng-model="taskData.createdAt"/>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <h4>Updated Time: </h4>
+        </div>
+        <div class="col-md-6">
+            <input type="text" ng-disabled="1==1" class="form-control" ng-model="taskData.updatedAt"/>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">&nbsp;</div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <h4>Resolved Time: </h4>
+        </div>
+        <div class="col-md-6">
+            <input type="text" ng-disabled="1==1" class="form-control" ng-model="taskData.resolvedAt"/>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <h4>&nbsp;</h4>
+        </div>
+        <div class="col-md-6">&nbsp;</div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">&nbsp;</div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">&nbsp;</div>
+    <div class="col-md-2"> 
+        <a href="#" class="btn btn-primary btn-block">Back</a> 
+    </div>
+    <div class="col-md-2"> 
+        <button class="btn btn-primary btn-block" ng-click="onSave()" ng-disabled="disableLogic">Save</button> 
+    </div>
+</div>

@@ -1,0 +1,28 @@
+
+html, body, input, select, textarea {
+    font-size: 1.05em !important;
+}
+
+.ui-hdr {
+    text-align: center;
+}
+
+.ui-cell {
+    text-align: center;
+}
+
+.ui-grid-invisible {
+    display: none;
+}
+
+.full button span {
+  background-color: limegreen;
+  border-radius: 32px;
+  color: black;
+}
+
+.partially button span {
+  background-color: orange;
+  border-radius: 32px;
+  color: black;
+}
